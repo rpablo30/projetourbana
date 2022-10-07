@@ -1,0 +1,27 @@
+<mat-card>
+    <mat-card-title>Digite seus dados </mat-card-title>
+    
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome"
+                [(ngModel)]="usuario.nome" name="name">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Email"
+                [(ngModel)]="usuario.email" name="email">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Tipo"
+                [(ngModel)]="usuario.tipo" name="tipo">
+        </mat-form-field>
+    
+    </form>
+
+    <button mat-raised-button (click)="createUsuario()" color="primary">
+        Salvar
+    </button>
+    <button mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+</mat-card>
+
